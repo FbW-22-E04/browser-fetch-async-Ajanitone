@@ -1,5 +1,5 @@
-//import "../styles/main.scss";
-//import "babel-polyfill";
+// import "../styles/main.scss";
+// import "babel-polyfill";
 
 const modal = document.getElementById("myModal");
 let promiseOfModal = new Promise(function (resolve) {
@@ -29,6 +29,20 @@ modal.addEventListener("click", (e) => {
       modal.style.display = "none";
       break;
   }
+});
+
+let btn = document.querySelector("#continue");
+
+// async function promiseBtn() {
+//   await btn.getAnimations()[0].finished;
+//   btn.style.backgroundColor = "#eee";
+//   alert("Continue to subscribe");
+// }
+
+btn.addEventListener("animationend", () => {
+  btn.style.backgroundColor = "#EACDE9";
+  btn.style.color = "#E3907F";
+  alert("Continue to subscribe");
 });
 
 // const modal = document.getElementById("myModal");
